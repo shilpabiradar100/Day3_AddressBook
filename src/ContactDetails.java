@@ -72,4 +72,18 @@ public class ContactDetails {
         this.zipCode = zipCode;
     }
 
+    @Override
+    public String toString() {
+        return "ContactDetails{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNo=" + phoneNo +
+                ", zipCode=" + zipCode +
+                '}';
+    }
 }
+
