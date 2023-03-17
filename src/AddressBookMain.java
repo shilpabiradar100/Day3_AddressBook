@@ -8,7 +8,7 @@ public class AddressBookMain {
         int num;
         char choice = 'y';
         while (choice == 'y') {
-            System.out.println("Press: \n 1 for Adding Contact \n 2 for Displaying Contact\n 3 for Editing Contact");
+            System.out.println("Press: \n 1 for Adding Contact \n 2 for Displaying Contact\n 3 for Editing Contact \n 4 for Deleting Contact");
             num = sc.nextInt();
             switch (num) {
                 case 1:
@@ -20,6 +20,9 @@ public class AddressBookMain {
                     break;
                 case 3:
                     addressBook.editContact();
+                    break;
+                case 4:
+                    addressBook.deleteContact();
                     break;
 
             }

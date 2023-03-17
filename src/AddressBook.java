@@ -40,6 +40,7 @@ public class AddressBook {
     ContactDetails[] contactList = new ContactDetails[10];
 
     static int i = 0;
+    static  int j = 0;
 
     void addcontact() {
         ContactDetails ad1 = new ContactDetails();
@@ -128,5 +129,26 @@ public class AddressBook {
         }
         return 0;
     }
-}
 
+    private int getUserData(String dname) {
+        for (j = 0; j < contactList.length; j++) {
+            if (contactList[j].getFirstName().equals(dname)) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+
+
+    void deleteContact()
+    {
+        System.out.println("Enter the person name whose name you want to delete");
+        String dName = scanner.next();
+        int result1 = getUserData(dName);
+
+        if(result1 == 1)
+        {
+            contactList[j] = null;
+        }
+    }
+}

@@ -9,9 +9,9 @@
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignments.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddressBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddressBookMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddressBookMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContactDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactDetails.java" afterDir="false" />
