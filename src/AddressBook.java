@@ -1,8 +1,9 @@
+import java.util.Arrays;
 
 import java.util.Scanner;
 public class AddressBook {
     Scanner scanner = new Scanner(System.in);
-    ContactDetails contact = new ContactDetails();
+    ContactDetails[] contact = new ContactDetails[10];
 
 //    public void createContact() {
 //
@@ -39,6 +40,7 @@ public class AddressBook {
     ContactDetails[] contactList = new ContactDetails[10];
 
     static int i = 0;
+
     void addcontact() {
         ContactDetails ad1 = new ContactDetails();
         System.out.println("Enter Your First Name: ");
@@ -50,7 +52,7 @@ public class AddressBook {
         ad1.setLastName(lastName);
 
         System.out.println("Enter your Address: ");
-        String address = scanner.next();
+        String address = scanner.nextLine();
         ad1.setAddress(address);
 
         System.out.println("Enter Your City: ");
@@ -82,6 +84,49 @@ public class AddressBook {
             System.out.println(contactList[j]);
 
         }
+    }
+
+    void editContact() {
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("Enter the person name whose detail you want to edit");
+        String uname = sc2.next();
+        int result = getUserDate(uname);
+        if (result == 1) {
+            System.out.println("Choose\n1:Last Name\n2:Phone Number\n3:city");
+            int editChoice = sc2.nextInt();
+            switch (editChoice) {
+                case 1:
+                    System.out.println(contactList[i]);
+                    System.out.println("Enter the new lastname");
+                    String newLastName = sc2.next();
+                    contactList[i].setLastName(newLastName);
+                    break;
+
+                case 2:
+                    System.out.println("Enter the new phone Number");
+                    long newPhoneNumber = sc2.nextLong();
+                    contactList[i].setPhoneNo(newPhoneNumber);
+                    break;
+                case 3:
+                    System.out.println("Enter the new city");
+                    String newCity = sc2.next();
+                    contactList[i].setCity(newCity);
+                    break;
+                default:
+                    System.out.println("Wrong Choice of Edit");
+
+            }
+        }
 
     }
+
+    private int getUserDate(String uname) {
+        for (i = 0; i < contactList.length; i++) {
+            if (contactList[i].getFirstName().equals(uname)) {
+                return 1;
+            }
+        }
+        return 0;
+    }
 }
+
